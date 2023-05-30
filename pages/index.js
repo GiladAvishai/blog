@@ -5,7 +5,7 @@ export default function Home() {
 
   const fetchPosts = async () => {
     const response = await fetch("/api/posts");
-    const data = await response.json(); 
+    const data = await response.json();
     setPosts(data);
   };
 
@@ -14,15 +14,13 @@ export default function Home() {
       <div>
         <h1>blog</h1>
         <button onClick={fetchPosts}>load Posts</button>
-        {
-          posts.map( post => {
-            return (
-              <div key={post.id}>
-                {post.id} {post.title} {post.content}
-              </div>
-            );
-          })
-        }
+        {posts.map((post) => {
+          return (
+            <div key={post.id}>
+              {post.id} {post.title} {post.content}
+            </div>
+          );
+        })}
       </div>
     </>
   );
