@@ -1,3 +1,4 @@
+// This is The array used as a fake DB
 export const posts = [
     {
         id: 1,
