@@ -17,7 +17,7 @@ export default function Home() {
       <div>
         <h1>blog</h1>
         <button onClick={fetchPosts}>load Posts</button>
-        {/*load and deconstuct each post onto the page*/}
+        {/*load and deconstruct each post onto the page*/}
         {posts.map((post) => {
           return (
             <div key={post.id}>
